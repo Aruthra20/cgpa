@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        input { 
+            margin-bottom: 10px;
+            font-size: large;
+            background-color: rgb(255, 255, 255);
+        }
+
+        div {
+            padding: 20px;
+         
+        }
+
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff4242;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        h3{
+            color: #000000;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>CGPA CALCULATOR (EEE)</h1>
+        <p>Example input <br>CE201 : S</p>
+    </header>
+
+    <div>
+
+        <h3>Sem 1: </h3>
+        <!-- <form name="sem1" id="sem1"> -->
+
+        CE201 <input type="text" maxlength="1" id="CE201"> <br>
+        CS201 <input type="text" maxlength="1" id="CS201"> <br>
+        CS202 <input type="text" maxlength="1" id="CS202"> <br>
+        EE201 <input type="text" maxlength="1" id="EE201"> <br>
+        EE202 <input type="text" maxlength="1" id="EE202"> <br>
+        FY201 <input type="text" maxlength="1" id="FY201"> <br>
+        MA201 <input type="text" maxlength="1" id="MA201"> <br>
+        ME202 <input type="text" maxlength="1" id="ME202"> <br>
+
+        <!-- </form> -->
+
+    </div>
+
+    <hr>
+
+    <div>
+
+        <h3>Sem 2: </h3>
+        <!-- <form name="sem2" id="sem2"> -->
+
+        CY201 <input type="text" maxlength="1" id="CY201"> <br>
+        CY202 <input type="text" maxlength="1" id="CY202"> <br>
+        HS201 <input type="text" maxlength="1" id="HS201"> <br>
+        MA202 <input type="text" maxlength="1" id="MA202"> <br>
+        ME201 <input type="text" maxlength="1" id="ME201"> <br>
+        PH201 <input type="text" maxlength="1" id="PH201"> <br>
+        PH202 <input type="text" maxlength="1" id="PH202"> <br>
+
+        <!-- </form> -->
+
+    </div>
+
+    <hr>
+
+    <div>
+
+        <h3>Sem 3: </h3>
+        <!-- <form name="sem3" id="sem3"> -->
+
+        EE203 <input type="text" maxlength="1" id="EE203"> <br>
+        EE204 <input type="text" maxlength="1" id="EE204"> <br>
+        EE205 <input type="text" maxlength="1" id="EE205"> <br>
+        EE206 <input type="text" maxlength="1" id="EE206"> <br>
+        EE207 <input type="text" maxlength="1" id="EE207"> <br>
+        MA204 <input type="text" maxlength="1" id="MA204"> <br>
+        SH202 <input type="text" maxlength="1" id="SH202"> <br>
+        EE208 <input type="text" maxlength="1" id="EE208"> <br>
+        EE209 <input type="text" maxlength="1" id="EE209"> <br>
+        MINOR1 <input type="text" maxlength="1" id="MINOR1"> <br>
+
+        <!-- </form> -->
+
+    </div>
+
+    <hr>
+
+    <div>
+
+        <h3>Sem 4: </h3>
+        <!-- <form name="sem4" id="sem4"> -->
+
+        EE213 <input type="text" maxlength="1" id="EE213"> <br>
+        SH201 <input type="text" maxlength="1" id="SH201"> <br>
+        CS235 <input type="text" maxlength="1" id="CS235"> <br>
+        EE211 <input type="text" maxlength="1" id="EE211"> <br>
+        CS234 <input type="text" maxlength="1" id="CS234"> <br>
+        EE210 <input type="text" maxlength="1" id="EE210"> <br>
+        EE212 <input type="text" maxlength="1" id="EE212"> <br>
+        EE214 <input type="text" maxlength="1" id="EE214"> <br>
+        MINOR2 <input type="text" maxlength="1" id="MINOR2"> <br>
+
+        <!-- </form> -->
+
+    </div>
+
+    <hr>
+
+    <div>
+
+        <h3>Sem 5: </h3>
+        <!-- <form name="sem5" id="sem5"> -->
+
+        EE215 <input type="text" maxlength="1" id="EE215"> <br>
+        EE216 <input type="text" maxlength="1" id="EE216"> <br>
+        EE217 <input type="text" maxlength="1" id="EE217"> <br>
+        EE218 <input type="text" maxlength="1" id="EE218"> <br>
+        EE219 <input type="text" maxlength="1" id="EE219"> <br>
+        HS202 <input type="text" maxlength="1" id="HS202"> <br>
+        EE220 <input type="text" maxlength="1" id="EE220"> <br>
+        EE221 <input type="text" maxlength="1" id="EE221"> <br>
+        OEC <input type="text" maxlength="1" id="OEC"> <br>
+        MINOR3 <input type="text" maxlength="1" id="MINOR3"> <br>
+
+        <!-- </form> -->
+
+    </div>
+
+    <hr>
+
+    <div>
+
+        <h3>EXTRA</h3>
+
+
+        <h3>Minor</h3>
+        <!--Radio Select -->
+        <div class="select-minor">
+            <div class="radio">
+                <input id="minoryes" name="minor" type="radio" value="minoryes">
+                <label for="minoryes" class="radio-label">Yes</label>
+            </div>
+            <div class="radio">
+                <input id="minorno" name="minor" type="radio" value="minorno">
+                <label for="minorno" class="radio-label">No</label>
+            </div>
+        </div>
+
+        <h3>OEC</h3>
+        <!--Radio Select -->
+        <div class="select-oec">
+            <div class="radio">
+                <input id="oecyes" name="oec" type="radio" value="oecyes">
+                <label for="oecyes" class="radio-label">Yes</label>
+            </div>
+            <div class="radio">
+                <input id="oecno" name="oec" type="radio" value="oecno">
+                <label for="oecno" class="radio-label">No</label>
+            </div>
+        </div>
+
+        <br>
+
+        <input id="getCGPA" type="button" value="GET CGPA" onclick="calculate()">
+
+    </div>
+
+    <hr>
+
+    <div>
+
+        <h3>GPA DETAILS:</h3>
+
+        <h2 id="sem1gpa">SEM 1 (GPA) : -</h2>
+        <h2 id="sem2gpa">SEM 2 (GPA) : -</h2>
+        <h2 id="sem3gpa">SEM 3 (GPA) : -</h2>
+        <h2 id="sem4gpa">SEM 4 (GPA) : -</h2>
+        <h2 id="sem5gpa">SEM 5 (GPA) : -</h2>
+        <br>
+        
+        <h3>CGPA DETAILS:</h3>
+        <h2 id="sem1cgpa">SEM 1 (CGPA) : -</h2>
+        <h2 id="sem2cgpa">SEM 2 (CGPA) : -</h2>
+        <h2 id="sem3cgpa">SEM 3 (CGPA) : -</h2>
+        <h2 id="sem4cgpa">SEM 4 (CGPA) : -</h2>
+        <h2 id="sem5cgpa">SEM 5 (CGPA) : -</h2>
+
+    </div>
+
+    <hr>
+</body>
+
+<script>
+
+    var sem1code = ["CE201", "CS201", "CS202", "EE201", "EE202", "FY201", "MA201", "ME202"];
+    var sem2code = ["CY201", "CY202", "HS201", "MA202", "ME201", "PH201", "PH202"];
+    var sem3code = ["EE203", "EE204", "EE205", "EE206", "EE207", "MA204", "SH202", "EE208", "EE209", "MINOR1"];
+    var sem4code = ["EE213", "SH201", "CS235", "EE211", "CS234", "EE210", "EE212", "EE214", "MINOR2"];
+    var sem5code = ["EE215", "EE216", "EE217", "EE218", "EE219", "HS202", "EE220", "EE221", "OEC", "MINOR3"];
+
+    var sem1credit = [0, 3, 1.5, 4, 1.5, 0, 4, 3];
+    var sem2credit = [4, 1.5, 3, 4, 1.5, 4, 1.5];
+    var sem3credit = [4, 3, 3, 3, 3, 4, 0, 1.5, 1.5, 4];
+    var sem4credit = [1.5, 2, 1.5, 3, 3, 3, 3, 1.5, 4];
+    var sem5credit = [3, 3, 3, 3, 4, 3, 1.5, 1.5, 3, 4];
+
+    var sem1Points = 0;
+    var sem2Points = 0;
+    var sem3Points = 0;
+    var sem4Points = 0;
+    var sem5Points = 0;
+
+    var sem1TotalCredit = 0;
+    var sem2TotalCredit = 0;
+    var sem3TotalCredit = 0;
+    var sem4TotalCredit = 0;
+    var sem5TotalCredit = 0;
+
+    function calculate() {
+
+        sem1Cal();
+        sem2Cal();
+        sem3Cal();
+        sem4Cal();
+        sem5Cal();
+
+        cgpa1Cal();
+        cgpa2Cal();
+        cgpa3Cal();
+        cgpa4Cal();
+        cgpa5Cal();
+
+        window.scrollTo(0,document.body.scrollHeight);
+    }
+
+    function sem1Cal() {
+        i = 0;
+        sem1code.forEach(element => {
+            var grade = document.getElementById(element).value;
+            var credit = sem1credit[i];
+            var point = getPoint(grade);
+            var creditPoint = credit * point;
+            sem1Points += creditPoint;
+            sem1TotalCredit += credit;
+            i++;
+        });
+
+        var sem1res = sem1Points / sem1TotalCredit;
+
+        document.getElementById("sem1gpa").innerText = `SEM 1 (GPA) : ${sem1res}`;
+
+    }
+
+    function sem2Cal() {
+        i = 0;
+        sem2code.forEach(element => {
+            var grade = document.getElementById(element).value;
+            var credit = sem2credit[i];
+            var point = getPoint(grade);
+            var creditPoint = credit * point;
+            sem2Points += creditPoint;
+            sem2TotalCredit += credit;
+            i++;
+        });
+
+        var sem2res = sem2Points / sem2TotalCredit;
+
+        document.getElementById("sem2gpa").innerText = `SEM 2 (GPA) : ${sem2res}`;
+
+    }
+
+    function sem3Cal() {
+
+        var isMinor = document.getElementById("minoryes").checked;
+        console.log(isMinor);
+
+        if (!isMinor) {
+            sem3code.splice(9, 1);
+            sem3credit.splice(9, 1);
+
+        }
+
+
+        i = 0;
+        sem3code.forEach(element => {
+            var grade = document.getElementById(element).value;
+            var credit = sem3credit[i];
+            var point = getPoint(grade);
+            var creditPoint = credit * point;
+            sem3Points += creditPoint;
+            sem3TotalCredit += credit;
+            i++;
+        });
+
+        var sem3res = sem3Points / sem3TotalCredit;
+
+        document.getElementById("sem3gpa").innerText = `SEM 3 (GPA) : ${sem3res}`;
+
+    }
+
+    function sem4Cal() {
+
+        var isMinor = document.getElementById("minoryes").checked;
+        console.log(isMinor);
+
+        if (!isMinor) {
+            sem4code.splice(8, 1);
+            sem4credit.splice(8, 1);
+
+        }
+
+
+        i = 0;
+        sem4code.forEach(element => {
+            var grade = document.getElementById(element).value;
+            var credit = sem4credit[i];
+            var point = getPoint(grade);
+            var creditPoint = credit * point;
+            sem4Points += creditPoint;
+            sem4TotalCredit += credit;
+            i++;
+        });
+
+        var sem4res = sem4Points / sem4TotalCredit;
+
+        document.getElementById("sem4gpa").innerText = `SEM 4 (GPA) : ${sem4res}`;
+
+    }
+
+    function sem5Cal() {
+
+        var isMinor = document.getElementById("minoryes").checked;
+        var isOEC = document.getElementById("oecyes").checked;
+
+
+        if (!isMinor) {
+            sem5code.splice(9, 1);
+            sem5credit.splice(9, 1);
+        }
+
+        if (!isOEC) {
+            sem5code.splice(8, 1);
+            sem5credit.splice(8, 1);
+        }
+
+
+        i = 0;
+        sem5code.forEach(element => {
+            var grade = document.getElementById(element).value;
+            var credit = sem5credit[i];
+            var point = getPoint(grade);
+            var creditPoint = credit * point;
+            sem5Points += creditPoint;
+            sem5TotalCredit += credit;
+            i++;
+        });
+
+        var sem5res = sem5Points / sem5TotalCredit;
+
+        document.getElementById("sem5gpa").innerText = `SEM 5 (GPA) : ${sem5res}`;
+
+    }
+
+    function cgpa1Cal() {
+
+        var cgpa1 = (sem1Points ) / (sem1TotalCredit);
+
+        document.getElementById("sem1cgpa").innerText = `SEM 1 (CGPA) : ${cgpa1}`;
+
+    }
+
+    function cgpa2Cal() {
+
+        var cgpa2 = (sem1Points + sem2Points) / (sem1TotalCredit + sem2TotalCredit);
+
+        document.getElementById("sem2cgpa").innerText = `SEM 2 (CGPA) : ${cgpa2}`;
+
+    }
+
+
+    function cgpa3Cal() {
+
+        var cgpa3 = (sem1Points + sem2Points + sem3Points ) / (sem1TotalCredit + sem2TotalCredit + sem3TotalCredit );
+
+        document.getElementById("sem3cgpa").innerText = `SEM 3 (CGPA) : ${cgpa3}`;
+
+    }
+
+
+    function cgpa4Cal() {
+
+        var cgpa4 = (sem1Points + sem2Points + sem3Points + sem4Points) / (sem1TotalCredit + sem2TotalCredit + sem3TotalCredit + sem4TotalCredit);
+
+        document.getElementById("sem4cgpa").innerText = `SEM 4 (CGPA) : ${cgpa4}`;
+
+    }
+
+
+    function cgpa5Cal() {
+
+        var cgpa5 = (sem1Points + sem2Points + sem3Points + sem4Points + sem5Points) / (sem1TotalCredit + sem2TotalCredit + sem3TotalCredit + sem4TotalCredit + sem5TotalCredit);
+
+        document.getElementById("sem5cgpa").innerText = `SEM 5 (CGPA) : ${cgpa5}`;
+
+    }
+
+
+    function getPoint(grade) {
+
+        var g = grade.toUpperCase();
+
+        console.log(g);
+
+        var point;
+
+        switch (g) {
+            case 'S': {
+                point = 10;
+                break;
+            }
+            case 'A': {
+                point = 9;
+                break;
+            }
+            case 'B': {
+                point = 8;
+                break;
+            }
+            case 'C': {
+                point = 7;
+                break;
+            }
+            case 'D': {
+                point = 6;
+                break;
+            }
+            case 'E': {
+                point = 5;
+                break;
+            }
+            case 'F': {
+                point = 0;
+                break;
+            }
+            case 'P': {
+                point = 0;
+                break;
+            }
+        }
+
+        return point;
+
+    }
+
+
+
+
+</script>
+
+</html>
